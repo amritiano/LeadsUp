@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 ]
 created_apps = [
     'api',
-    'corsheaders'
+    'corsheaders',
+    'rest_framework',
 ]
 
 INSTALLED_APPS += created_apps
