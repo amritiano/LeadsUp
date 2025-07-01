@@ -1,4 +1,12 @@
 .mui-selected {
   background-color: rgb(34, 34, 85) !important;
-  color: white !important;
+}
+.topbar {
+  display: flex;
+  background-color: rgb(21, 21, 96);
+  padding: 10px;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
 }
