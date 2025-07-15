@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axiosInstance from './axios';
 import { Box } from '@mui/material';
 import AddBoxIcon from '@mui/icons-material/AddBox';
-import '../App.css';  // Make sure this path matches where your CSS is
-import TextForm from './forms/textform'; // Assuming you have a TextForm component
-import Select from './forms/select'; // Assuming you have a Select component
-import MultiselectForm from './forms/multiselectform'; // Assuming you have a MultiselectForm component
-
+import '../App.css';  
+import TextForm from './forms/textform'; 
+import Select from './forms/select';
+import MultiselectForm from './forms/multiselectform'; 
+import DescriptionForm from './forms/descriptionform'; 
+import Button from '@mui/material/Button';
 const Create = () => {
   const [country, setCountry] = useState([]);
   const [league, setLeague] = useState([]);
@@ -73,7 +74,7 @@ const Create = () => {
                <TextForm label="Attendance" />
            </Box>
 
-        <Box className="formfield">
+            <Box className="formfield">
           <MultiselectForm
             label="Characteristics"
             options={characteristics.map(c => ({
@@ -82,6 +83,14 @@ const Create = () => {
             }))}
           />
       </Box>
+        <Box className="formfield"
+          sx={{ width: '70%' }}>
+          <DescriptionForm 
+          label="Description" 
+          rows={9}
+          />
+          <Button variant="contained">Submit the data</Button>
+          </Box>
       </Box>
     </div>
   );
